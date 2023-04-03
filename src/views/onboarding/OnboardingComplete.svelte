@@ -17,10 +17,10 @@
 <Content size="lg" class="text-center">
   <Heading>Welcome to Nostr</Heading>
   <p>
-    You’re all set! If have any questions, or need any help, just ask. Your fellow nostriches are
+    You’re all set! If have any questions, or need any help, just ask. Your fellow nostrkids and are
     always happy to lend a hand.
   </p>
-  <Anchor {loading} type="button-accent" on:click={startSignup}>Get on Nostr</Anchor>
+  <Anchor {loading} type="button-accent" on:click={startSignup}>Get on nostrkid</Anchor>
   {#if loading}
     <Spinner />
   {/if}

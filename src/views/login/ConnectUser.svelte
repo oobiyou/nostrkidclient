@@ -24,11 +24,11 @@
   let searching = true
   let currentRelays = {} as Record<number, Relay>
   let attemptedRelays = new Set()
-  let customRelays = []
-  let knownRelays = watch("relays", table => shuffle(table.all()))
-  let allRelays = []
+  let customRelays = import.meta.env.VITE_FORCE_RELAYS
+  let knownRelays = import.meta.env.VITE_FORCE_RELAYS
+  let allRelays = import.meta.env.VITE_FORCE_RELAYS
 
-  $: allRelays = $knownRelays.concat(customRelays)
+  $: allRelays = import.meta.env.VITE_FORCE_RELAYS
 
   const searchForRelays = async () => {
     if (!searching) {
@@ -107,13 +107,8 @@
 <Content size="lg">
   <Heading class="text-center">Connect to Nostr</Heading>
   <p class="text-left">
-    We're searching for your profile on the network. If you'd like to select your relays manually
-    instead, click <Anchor
-      on:click={() => {
-        customRelayUrl = ""
-        modal = "custom"
-      }}>here</Anchor
-    >.
+    We're searching for your profile on the network. Just a moment wile
+    we get things set up.
   </p>
   {#if pool.forceUrls.length > 0}
     <Spinner />
@@ -142,24 +137,34 @@
         <Spinner delay={0} />
       {:else if modal === "failure"}
         <div class="my-12 text-center">
-          We didn't have any luck finding your profile data - you'll need to select your relays
-          manually to continue. You can skip this step by clicking
-          <Anchor href="/relays">here</Anchor>, but be aware that any new relay selections will
-          replace your old ones.
+          You are connected and ready to go!
+          <section>
+          <p>
+          Your home page may take some time to load (15 - 20secs. be patient).
+          <section>
+          <p>
+          After waiting, click on the profile avatar in the upper left hand corner to load the profile feed.</p>
+          </section>
+          <section>
+          <p>
+           Use the side bar to navigate different views.
+          </p>
+          </section>
+          <section>
+          <p>
+          click
+          <Anchor href="/views/notes">here</Anchor>, to enter nostrkid.
+          </p>
+          </section>
         </div>
-      {:else if modal === "custom"}
-        <div class="my-12 text-center">
-          Enter the url of a relay you've used in the past to store your profile and we'll check
-          there.
-        </div>
+      
       {/if}
 
       {#if ["failure", "custom"].includes(modal)}
         <form class="flex gap-2" on:submit|preventDefault={addCustomRelay}>
-          <Input bind:value={customRelayUrl} wrapperClass="flex-grow">
-            <i slot="before" class="fa fa-search" />
-          </Input>
-          <Anchor type="button" on:click={addCustomRelay}>Search relay</Anchor>
+        
+
+        
         </form>
       {/if}
     </Content>

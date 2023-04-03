@@ -66,7 +66,7 @@
     loadAppData(user.getPubkey())
 
     modal.set(null)
-    navigate("/notes/follows")
+    navigate("/login")
   }
 
   // Prime our people cache for hardcoded follows and a sample of people they follow

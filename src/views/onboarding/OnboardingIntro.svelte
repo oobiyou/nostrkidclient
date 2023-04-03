@@ -11,7 +11,9 @@
 <Content size="lg" class="text-center">
   <Heading>Create an Account</Heading>
   <p>
-    New to Nostr? Click <Anchor external href={tutorialUrl}>here</Anchor> or watch the video below for
+    Wlecome to nostrkid beta, a kids only digital space.</p>
+  <p>Learn about technology and bitcoin, meet new firends, and start earning bitcoin!</p>
+  <p> ? Click <Anchor external href={tutorialUrl}>here</Anchor> or watch the video below for
     a crash course on what it is, and how to use it.
   </p>
   <video controls src={videoUrl} class="object-contain object-center" />
