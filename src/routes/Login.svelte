@@ -50,7 +50,7 @@
       </section>
       <section>
       <p class="text-center">
-          If youre not signed up, you can still explore nostrkid by entering the npub 
+          If youre not signed up, you can still explore by entering the npub 
           of a nostrkid to view their profile and activity <i>see npub login below</i>
           </p>
       </section>
