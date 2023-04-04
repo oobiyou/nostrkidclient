@@ -162,7 +162,7 @@
           <div class="text-center">
           <p>
           click
-          <Anchor href="/views/notes">here</Anchor>, to enter nostrkid.
+          <Anchor href="https://oobiyou.github.io/nostrkidclient">here</Anchor>, to enter nostrkid.
           </p>
           </div>
           </section>
