@@ -105,9 +105,9 @@
 </script>
 
 <Content size="lg">
-  <Heading class="text-center">Connect to Nostr</Heading>
-  <p class="text-left">
-    We're searching for your profile on the network. Just a moment wile
+  <Heading class="text-center">Connecting to Nostrkid BETA</Heading>
+  <p class="text-center">
+    We're searching for your profile on the network. Just a moment while
     we get things set up.
   </p>
   {#if pool.forceUrls.length > 0}
@@ -136,27 +136,37 @@
         <div class="my-12 text-center">Success! Just a moment while we get things set up.</div>
         <Spinner delay={0} />
       {:else if modal === "failure"}
-        <div class="my-12 text-center">
-          You are connected and ready to go!
+        <div class="text-center">
+          <b>You are connected and ready to go!</b>
+          </div>
           <section>
+          <div class="text-center">
           <p>
           Your home page may take some time to load (15 - 20secs. be patient).
-          <section>
-          <p>
-          After waiting, click on the profile avatar in the upper left hand corner to load the profile feed.</p>
+          </div>
           </section>
           <section>
+          <div class="text-center">
+          <p>
+          After waiting, click on the profile avatar in the upper left hand corner to load the profile feed.</p>
+          <div>
+          </section>
+          <section>
+          <div class="text-center">
           <p>
            Use the side bar to navigate different views.
           </p>
+          </div>
           </section>
           <section>
+          <div class="text-center">
           <p>
           click
           <Anchor href="/views/notes">here</Anchor>, to enter nostrkid.
           </p>
+          </div>
           </section>
-        </div>
+        
       
       {/if}
 

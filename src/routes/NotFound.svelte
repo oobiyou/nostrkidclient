@@ -3,5 +3,5 @@
   import {navigate} from "svelte-routing"
   import user from "src/agent/user"
 
-  onMount(() => navigate(user.getProfile() ? "/login" : "/views/onboarding"))
+  onMount(() => navigate(user.getProfile() ? "/views/notes" : "/views/onboarding"))
 </script>
